@@ -13,7 +13,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class PhoneDetectorTracker:
-    def __init__(self, video_path, confidence_threshold=0.2, display_output=True):
+    def __init__(self, video_path, confidence_threshold=0.5, display_output=True):
         """
         Initialize the phone detector and tracker
         Args:
