@@ -67,7 +67,7 @@ class PhoneDetectorTracker:
                     conf = float(box.conf[0])
                     
                     # Check if detection is a phone (class 67) and meets confidence threshold
-                    if cls == 67 and conf >= self.confidence_threshold:
+                    if cls == 0 and conf >= self.confidence_threshold:
                         xyxy = box.xyxy[0].cpu().numpy()  # get box coordinates
                         x1, y1, x2, y2 = map(int, xyxy)
                         w = x2 - x1
